@@ -13,8 +13,16 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-for-dev')
 # Режим отладки
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.onrender.com',
+    'django-m0az.onrender.com',
+    '.netlify.app',
+]
+
 # Разрешенные хосты
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+#ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 # Приложения
 INSTALLED_APPS = [
